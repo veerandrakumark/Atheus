@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #fafafa;
+  color: #09090b;
+}
+
+.terminal-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.terminal-scroll::-webkit-scrollbar-track {
+  @apply bg-zinc-100;
+}
+
+.terminal-scroll::-webkit-scrollbar-thumb {
+  @apply bg-zinc-300 rounded;
+}
+
+.bg-dot-grid {
+  background-image: radial-gradient(#e4e4e7 1px, transparent 1px);
+  background-size: 20px 20px;
+}

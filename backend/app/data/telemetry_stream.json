@@ -1,0 +1,102 @@
+[
+  {
+    "event_id": "evt-001", "timestamp": "2026-09-19T10:00:00Z", "source_type": "syslog",
+    "source_ip": "10.0.1.5", "destination_ip": "10.0.1.5", "user": "system", "action": "cron_job_start",
+    "severity_baseline": 10, "payload_meta": {"job": "log_rotate"}
+  },
+  {
+    "event_id": "evt-002", "timestamp": "2026-09-19T10:01:00Z", "source_type": "network",
+    "source_ip": "10.0.1.50", "destination_ip": "10.0.2.20", "user": "svc_health", "action": "health_check",
+    "severity_baseline": 5, "payload_meta": {"target_port": 8080}
+  },
+  {
+    "event_id": "evt-003", "timestamp": "2026-09-19T10:05:00Z", "source_type": "auth",
+    "source_ip": "192.168.1.15", "destination_ip": "10.0.1.10", "user": "alice_dev", "action": "authorized_login",
+    "severity_baseline": 15, "payload_meta": {"auth_method": "publickey"}
+  },
+  {
+    "event_id": "evt-004", "timestamp": "2026-09-19T10:07:00Z", "source_type": "network",
+    "source_ip": "10.0.1.25", "destination_ip": "git.internal", "user": "ci_runner", "action": "git_push",
+    "severity_baseline": 20, "payload_meta": {"repo": "atheus-backend"}
+  },
+  {
+    "event_id": "evt-005", "timestamp": "2026-09-19T10:10:00Z", "source_type": "syscall",
+    "source_ip": "10.0.2.45", "destination_ip": null, "user": "postgres", "action": "backup_start",
+    "severity_baseline": 10, "payload_meta": {"file": "/var/backups/db"}
+  },
+  {
+    "event_id": "evt-006", "timestamp": "2026-09-19T10:12:00Z", "source_type": "network",
+    "source_ip": "10.0.1.10", "destination_ip": "10.0.2.45", "user": "alice_dev", "action": "db_query",
+    "severity_baseline": 15, "payload_meta": {"query_type": "select"}
+  },
+  {
+    "event_id": "evt-007", "timestamp": "2026-09-19T10:15:00Z", "source_type": "network",
+    "source_ip": "10.0.1.5", "destination_ip": "8.8.8.8", "user": "system", "action": "dns_query",
+    "severity_baseline": 5, "payload_meta": {"domain": "updates.ubuntu.com"}
+  },
+  {
+    "event_id": "evt-008", "timestamp": "2026-09-19T10:18:00Z", "source_type": "network",
+    "source_ip": "10.0.1.100", "destination_ip": "10.0.1.50", "user": "prometheus", "action": "metrics_scrape",
+    "severity_baseline": 5, "payload_meta": {"target_port": 9100}
+  },
+  {
+    "event_id": "evt-009", "timestamp": "2026-09-19T10:20:00Z", "source_type": "network",
+    "source_ip": "10.0.1.5", "destination_ip": "10.0.1.200", "user": "ansible", "action": "config_checkin",
+    "severity_baseline": 10, "payload_meta": {"status": "ok"}
+  },
+  {
+    "event_id": "evt-010", "timestamp": "2026-09-19T10:25:00Z", "source_type": "auth",
+    "source_ip": "192.168.1.15", "destination_ip": "10.0.1.10", "user": "alice_dev", "action": "authorized_logout",
+    "severity_baseline": 15, "payload_meta": {"duration_sec": 1200}
+  },
+  {
+    "event_id": "evt-011", "timestamp": "2026-09-19T10:30:00Z", "source_type": "syscall",
+    "source_ip": "10.0.2.45", "destination_ip": null, "user": "postgres", "action": "vacuum_run",
+    "severity_baseline": 10, "payload_meta": {"tables": ["incident_ledger"]}
+  },
+  {
+    "event_id": "evt-012", "timestamp": "2026-09-19T10:32:00Z", "source_type": "network",
+    "source_ip": "203.0.113.5", "destination_ip": "10.0.1.80", "user": "guest", "action": "http_request",
+    "severity_baseline": 5, "payload_meta": {"path": "/login"}
+  },
+  {
+    "event_id": "evt-013", "timestamp": "2026-09-19T10:35:00Z", "source_type": "syslog",
+    "source_ip": "10.0.1.5", "destination_ip": "10.0.1.5", "user": "system", "action": "background_task_done",
+    "severity_baseline": 10, "payload_meta": {"task": "index_refresh"}
+  },
+  {
+    "event_id": "evt-014", "timestamp": "2026-09-19T10:40:00Z", "source_type": "network",
+    "source_ip": "10.0.1.5", "destination_ip": "ntp.ubuntu.com", "user": "system", "action": "ntp_sync",
+    "severity_baseline": 5, "payload_meta": {"offset_ms": 2.5}
+  },
+  {
+    "event_id": "evt-015", "timestamp": "2026-09-19T10:45:00Z", "source_type": "network",
+    "source_ip": "10.0.1.50", "destination_ip": "10.0.1.80", "user": "haproxy", "action": "lb_healthcheck",
+    "severity_baseline": 5, "payload_meta": {"target_port": 443}
+  },
+  {
+    "event_id": "evt-016", "timestamp": "2026-09-19T10:50:00Z", "source_type": "cloud_audit",
+    "source_ip": "10.0.0.1", "destination_ip": "10.0.1.90", "user": "aws_ecs", "action": "container_start",
+    "severity_baseline": 20, "payload_meta": {"image": "atheus-api:latest"}
+  },
+  {
+    "event_id": "evt-017", "timestamp": "2026-09-19T10:55:00Z", "source_type": "auth",
+    "source_ip": "198.51.100.23", "destination_ip": "10.0.1.10", "user": "svc_deployer", "action": "failed_login",
+    "severity_baseline": 30, "payload_meta": {"auth_method": "password", "attempts": 15}
+  },
+  {
+    "event_id": "evt-018", "timestamp": "2026-09-19T10:56:00Z", "source_type": "auth",
+    "source_ip": "198.51.100.23", "destination_ip": "10.0.1.10", "user": "svc_deployer", "action": "authorized_login",
+    "severity_baseline": 40, "payload_meta": {"auth_method": "password"}
+  },
+  {
+    "event_id": "evt-019", "timestamp": "2026-09-19T11:00:00Z", "source_type": "network",
+    "source_ip": "10.0.1.10", "destination_ip": "10.0.2.45", "user": "svc_deployer", "action": "port_scan",
+    "severity_baseline": 70, "payload_meta": {"target_port": 445, "scanned_ports": [445, 3389, 22, 1433]}
+  },
+  {
+    "event_id": "evt-020", "timestamp": "2026-09-19T11:05:00Z", "source_type": "network",
+    "source_ip": "10.0.2.45", "destination_ip": "203.0.113.88", "user": "postgres", "action": "data_exfiltration",
+    "severity_baseline": 95, "payload_meta": {"target_port": 443, "bytes_out": 4800000000, "protocol": "tls"}
+  }
+]
